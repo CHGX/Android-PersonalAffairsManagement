@@ -1,1 +1,8 @@
-day1 2018.7.9
+day0 2018.7.9
+start
+
+day1 7.10
+main layout
+Í¸Ã÷×´Ì¬¡¢µ¼º½À¸ 
+      https://blog.csdn.net/fuxiaoyuqing/article/details/79064929
+AndroidSlidingUpPanel  https://blog.csdn.net/u013718120/article/details/51537732

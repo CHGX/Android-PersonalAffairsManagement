@@ -8,21 +8,22 @@ import android.view.View;
 import android.widget.Button;
 
 public class AddNewNoteActivity extends AppCompatActivity {
-private MyDatabaseHelper dbHelper;
+    private MyDatabaseHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_note);
-        dbHelper=new MyDatabaseHelper(this,"Note.db",null,1);
+        dbHelper = new MyDatabaseHelper(this, "Note.db", null, 1);
         dbHelper.getWritableDatabase();
-        Button addData =(Button) findViewById(R.id.add_data);
+        Button addData = (Button) findViewById(R.id.add_data);
         addData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SQLiteDatabase db= dbHelper.getWritableDatabase();
-                ContentValues values =new ContentValues();
-                values.put("name","DbAdd1");
-                db.insert("Note",null,values);
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                ContentValues values = new ContentValues();
+                values.put("name", "DbAdd1");
+                db.insert("Note", null, values);
                 values.clear();
             }
         });

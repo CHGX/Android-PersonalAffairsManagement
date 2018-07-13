@@ -101,23 +101,23 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 2; i++) {
             Fruit apple = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(apple);
-            Fruit banana = new Fruit("Banana", R.mipmap.ic_launcher);
+            Fruit banana = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(banana);
-            Fruit orange = new Fruit("Orange", R.mipmap.ic_launcher);
+            Fruit orange = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(orange);
-            Fruit watermelon = new Fruit("Watermelon", R.mipmap.ic_launcher);
+            Fruit watermelon = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(watermelon);
-            Fruit pear = new Fruit("Pear", R.mipmap.ic_launcher);
+            Fruit pear = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(pear);
-            Fruit grape = new Fruit("Grape", R.mipmap.ic_launcher);
+            Fruit grape = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(grape);
-            Fruit pineapple = new Fruit("Pineapple", R.mipmap.ic_launcher);
+            Fruit pineapple = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(pineapple);
-            Fruit strawberry = new Fruit("Strawberry", R.mipmap.ic_launcher);
+            Fruit strawberry = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(strawberry);
-            Fruit cherry = new Fruit("Cherry", R.mipmap.ic_launcher);
+            Fruit cherry = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(cherry);
-            Fruit mango = new Fruit("Mango", R.mipmap.ic_launcher);
+            Fruit mango = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
             fruitList.add(mango);
         }
     }

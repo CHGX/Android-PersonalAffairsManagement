@@ -39,10 +39,11 @@
                     android:layout_width="366dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/edit_bg"
+                    android:hint="   Search Note"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:textColorHint="#CCCCCC"
-                    android:hint="   Search Note"/>
+                    android:textColorHint="#CCCCCC" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -79,10 +80,24 @@
             app:menu="@menu/nav_menu"></android.support.design.widget.NavigationView>
     </android.support.v4.widget.DrawerLayout>
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center|top"
-        android:text="Up"
-        android:textSize="16sp" />
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/weather_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/title"></include>
+                <include layout="@layout/now"></include>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
 </com.sothree.slidinguppanel.SlidingUpPanelLayout>

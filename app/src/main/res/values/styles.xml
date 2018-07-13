@@ -7,4 +7,5 @@
         <item name="colorPrimary">#FFFFFF</item>
         <item name="android:textColorPrimary">@android:color/black</item>
     </style>
+
 </resources>

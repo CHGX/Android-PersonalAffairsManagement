@@ -28,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/toolbar"
+                android:background="#FFFFFF"
                 android:orientation="horizontal">
 
                 <EditText
@@ -40,7 +41,8 @@
 
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/ic_search_black_48dp" />
             </LinearLayout>
 
             <android.support.v4.widget.SwipeRefreshLayout
@@ -52,7 +54,8 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycer_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"></android.support.v7.widget.RecyclerView>
             </android.support.v4.widget.SwipeRefreshLayout>
         </RelativeLayout>
 

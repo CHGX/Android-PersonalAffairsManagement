@@ -46,8 +46,9 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.mipmap.ic_launcher);
+            actionBar.setHomeAsUpIndicator(R.mipmap.menu);
         }
+        actionBar.setDisplayShowTitleEnabled(false);
 
      /* //透明状态栏 透明导航栏
         if (Build.VERSION.SDK_INT >= 21) {
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 break;
-            case R.id.backup:
+            case R.id.addlist:
                 Intent intent = new Intent(MainActivity.this, AddNewNoteActivity.class);
                 startActivity(intent);
                 break;

@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/backup"
-        android:icon="@mipmap/ic_launcher"
-        android:title="Backup"
+        android:id="@+id/setting"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:title="setting"
         app:showAsAction="always"></item>
     <item
-        android:id="@+id/delete"
-        android:icon="@mipmap/ic_launcher"
+        android:id="@+id/reflash"
+        android:icon="@mipmap/ic_cached_black_48dp"
         android:title="Delete"
         app:showAsAction="ifRoom"></item>
     <item
-        android:id="@+id/settings"
-        android:icon="@mipmap/ic_launcher"
-        android:title="Settings"
+        android:id="@+id/addlist"
+        android:icon="@mipmap/ic_playlist_add_black_48dp"
+        android:title="addlist"
         app:showAsAction="ifRoom"></item>
 
 </menu>

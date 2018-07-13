@@ -41,7 +41,7 @@
                     android:background="@drawable/edit_bg"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:textColorHint="#DCDCDC"
+                    android:textColorHint="#CCCCCC"
                     android:hint="   Search Note"/>
                 <RelativeLayout
                     android:layout_width="match_parent"

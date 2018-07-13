@@ -21,7 +21,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/colorPrimary"
-                android:minHeight="?attr/actionBarSize"></android.support.v7.widget.Toolbar>
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/ToolbarTheme"
+                app:popupTheme="@style/ToolbarPopupTheme"
+                > </android.support.v7.widget.Toolbar>
 
             <LinearLayout
                 android:id="@+id/inputlayout"
@@ -29,13 +32,13 @@
                 android:layout_height="40dp"
                 android:layout_below="@id/toolbar"
                 android:background="#FFFFFF"
+
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/edit_text"
                     android:layout_width="366dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/edit_bg"
                     android:inputType="text"
                     android:maxLines="1" />
 

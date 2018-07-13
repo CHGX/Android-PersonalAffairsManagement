@@ -5,16 +5,16 @@
         android:id="@+id/setting"
         android:icon="@mipmap/ic_settings_black_24dp"
         android:title="setting"
-        app:showAsAction="always"></item>
+        app:showAsAction="never"></item>
     <item
         android:id="@+id/reflash"
-        android:icon="@mipmap/ic_cached_black_48dp"
+        android:icon="@mipmap/ic_cached_black_24dp"
         android:title="Delete"
-        app:showAsAction="ifRoom"></item>
+        app:showAsAction="never"></item>
     <item
         android:id="@+id/addlist"
-        android:icon="@mipmap/ic_playlist_add_black_48dp"
+        android:icon="@mipmap/add"
         android:title="addlist"
-        app:showAsAction="ifRoom"></item>
+        app:showAsAction="always"></item>
 
 </menu>

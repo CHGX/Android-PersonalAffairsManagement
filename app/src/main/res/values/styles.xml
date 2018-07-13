@@ -7,5 +7,10 @@
         <item name="colorPrimary">#FFFFFF</item>
         <item name="android:textColorPrimary">@android:color/black</item>
     </style>
-
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@android:color/black</item>
+    </style>
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">#FFFFFF</item>
+    </style>
 </resources>

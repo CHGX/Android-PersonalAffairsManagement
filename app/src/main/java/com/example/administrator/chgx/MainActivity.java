@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.mipmap.menu);
         }
         actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setLogo(R.mipmap.logo2);
 
      /* //透明状态栏 透明导航栏
         if (Build.VERSION.SDK_INT >= 21) {

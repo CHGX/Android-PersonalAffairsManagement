@@ -99,25 +99,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void initFruits() {
         for (int i = 0; i < 2; i++) {
-            Fruit apple = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit apple = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(apple);
-            Fruit banana = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit banana = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(banana);
-            Fruit orange = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit orange = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(orange);
-            Fruit watermelon = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit watermelon = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(watermelon);
-            Fruit pear = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit pear = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(pear);
-            Fruit grape = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit grape = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(grape);
-            Fruit pineapple = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit pineapple = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(pineapple);
-            Fruit strawberry = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit strawberry = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(strawberry);
-            Fruit cherry = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit cherry = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(cherry);
-            Fruit mango = new Fruit("Prabhdeep listened to this.", R.mipmap.ic_launcher);
+            Fruit mango = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
             fruitList.add(mango);
         }
     }

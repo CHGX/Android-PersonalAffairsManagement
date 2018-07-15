@@ -10,7 +10,7 @@ import android.widget.Toast;
  */
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
-    public static final String CREATE_NOTE = "create table Note(id integer primary key autoincrement,name text)";
+    public static final String CREATE_NOTE = "create table Note(id integer primary key autoincrement,name text,Time1 text)";
     private Context mContext;
 
     public MyDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {

@@ -19,11 +19,13 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
     static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView fruitImage;
         TextView fruitName;
+        TextView NoteTime1;
 
         public ViewHolder(View view) {
             super(view);
             fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
             fruitName = (TextView) view.findViewById(R.id.fruit_name);
+            NoteTime1 = (TextView) view.findViewById(R.id.text2);
         }
     }
 
@@ -43,6 +45,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
         Fruit fruit = mFruitList.get(position);
         holder.fruitImage.setImageResource(fruit.getImageId());
         holder.fruitName.setText(fruit.getName());
+        holder.NoteTime1.setText(fruit.getTime1());
     }
 
     @Override

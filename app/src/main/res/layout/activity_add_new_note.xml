@@ -1,35 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:background="#FFFAF0">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/AddNewNoteToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_bg"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme"></android.support.v7.widget.Toolbar>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/inputlayout2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal">
+        android:layout_height="120dp"
+        android:layout_below="@id/AddNewNoteToolbar"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_bg">
 
         <EditText
             android:id="@+id/inputText"
-            android:layout_width="366dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/edit_bg"
-            android:inputType="text"
-            android:maxLines="1" />
-
-        <Button
-            android:id="@+id/add_data"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@mipmap/ic_launcher"/>
-    </LinearLayout>
+            android:layout_height="40dp"
+            android:background="@drawable/edit_bg"
+            android:hint="   Search Note"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColorHint="#CCCCCC" />
+
+        <EditText
+            android:id="@+id/inputText2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/inputText" />
+
+        <EditText
+            android:id="@+id/inputText3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/inputText2"
+            android:background="@drawable/edit_bg" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/setDate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputlayout2" />
+
     <TextView
         android:id="@+id/time1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/inputlayout2"
         android:text="TIME"
-        android:textSize="20sp"/>
-</LinearLayout>
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/setDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setDate1" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/setDate1"
+        android:text="TIME2"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/add_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setDate2"
+        android:background="@mipmap/ic_launcher" />
+</RelativeLayout>

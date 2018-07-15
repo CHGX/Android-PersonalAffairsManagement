@@ -99,25 +99,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void initNotes() {
         for (int i = 0; i < 2; i++) {
-            Fruit apple = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit apple = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(apple);
-            Fruit banana = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit banana = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(banana);
-            Fruit orange = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit orange = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(orange);
-            Fruit watermelon = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit watermelon = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(watermelon);
-            Fruit pear = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit pear = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(pear);
-            Fruit grape = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit grape = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(grape);
-            Fruit pineapple = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit pineapple = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(pineapple);
-            Fruit strawberry = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit strawberry = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(strawberry);
-            Fruit cherry = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit cherry = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(cherry);
-            Fruit mango = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
+            Fruit mango = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1,"CHGX · 10:48");
             noteList.add(mango);
         }
         SQLiteDatabase db =dbHelper.getWritableDatabase();
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
             do {
                 String name =cursor.getString(cursor.getColumnIndex("name"));
                 Log.d("MainActivity","name="+name);
-                Fruit note1 = new Fruit(name, R.mipmap.mon1);
+                Fruit note1 = new Fruit(name, R.mipmap.mon1,"CHGX · 10:48");
                 noteList.add(note1);
             }while(cursor.moveToNext());
         }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
 
     <LinearLayout
         android:id="@+id/inputlayout2"
@@ -10,7 +13,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/edit_text2"
+            android:id="@+id/inputText"
             android:layout_width="366dp"
             android:layout_height="match_parent"
             android:background="@drawable/edit_bg"
@@ -20,6 +23,13 @@
         <Button
             android:id="@+id/add_data"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@mipmap/ic_launcher"/>
     </LinearLayout>
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIME"
+        android:textSize="20sp"/>
 </LinearLayout>

@@ -1,6 +1,8 @@
 package com.example.administrator.chgx;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.support.v4.view.GravityCompat;
@@ -11,32 +13,30 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    //   private String[] data = {"1", "2", "3"};
     private DrawerLayout mDrawerLayout;
-    private List<Fruit> fruitList = new ArrayList<>();
+    private List<Fruit> noteList = new ArrayList<>();
+    private MyDatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,data);
-        ListView listView =(ListView) findViewById(R.id.list_view);
-        listView.setAdapter(adapter);*/
-        initFruits();
+        dbHelper = new MyDatabaseHelper(this,"Note.db",null,1);
+        //RecyclerView
+        initNotes();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycer_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        FruitAdapter adapter = new FruitAdapter(fruitList);
+        FruitAdapter adapter = new FruitAdapter(noteList);
         recyclerView.setAdapter(adapter);
 
         //toolbar
@@ -97,29 +97,39 @@ public class MainActivity extends AppCompatActivity {
         imageView.setColorFilter(new ColorMatrixColorFilter(cMatrix));
     }
 
-    private void initFruits() {
+    private void initNotes() {
         for (int i = 0; i < 2; i++) {
             Fruit apple = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(apple);
+            noteList.add(apple);
             Fruit banana = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(banana);
+            noteList.add(banana);
             Fruit orange = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(orange);
+            noteList.add(orange);
             Fruit watermelon = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(watermelon);
+            noteList.add(watermelon);
             Fruit pear = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(pear);
+            noteList.add(pear);
             Fruit grape = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(grape);
+            noteList.add(grape);
             Fruit pineapple = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(pineapple);
+            noteList.add(pineapple);
             Fruit strawberry = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(strawberry);
+            noteList.add(strawberry);
             Fruit cherry = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(cherry);
+            noteList.add(cherry);
             Fruit mango = new Fruit("Prabhdeep listened to this.", R.mipmap.mon1);
-            fruitList.add(mango);
+            noteList.add(mango);
         }
+        SQLiteDatabase db =dbHelper.getWritableDatabase();
+        Cursor cursor = db.query("Note",null,null,null,null,null,null);
+        if(cursor.moveToFirst()){
+            do {
+                String name =cursor.getString(cursor.getColumnIndex("name"));
+                Log.d("MainActivity","name="+name);
+                Fruit note1 = new Fruit(name, R.mipmap.mon1);
+                noteList.add(note1);
+            }while(cursor.moveToNext());
+        }
+        cursor.close();
     }
-
 }

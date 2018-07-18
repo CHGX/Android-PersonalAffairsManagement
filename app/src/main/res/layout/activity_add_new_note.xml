@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFAF0">
+    android:background="#FFFAFA">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/AddNewNoteToolbar"
@@ -15,16 +15,17 @@
 
     <RelativeLayout
         android:id="@+id/inputlayout2"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_width="394dp"
+        android:layout_height="150dp"
         android:layout_below="@id/AddNewNoteToolbar"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/edit_bg">
 
         <EditText
             android:id="@+id/inputText"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="@drawable/edit_bg"
             android:hint="   Search Note"
             android:inputType="text"
@@ -34,54 +35,106 @@
         <EditText
             android:id="@+id/inputText2"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/inputText" />
 
         <EditText
             android:id="@+id/inputText3"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/inputText2"
             android:background="@drawable/edit_bg" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/inputlayout3"
+        android:layout_width="394dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/inputlayout2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_bg">
 
-    <Button
-        android:id="@+id/setDate1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/inputlayout2" />
+        <Button
+            android:id="@+id/setDate1"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_bg2"
+            android:text="日期"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/time1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/inputlayout2"
-        android:text="TIME"
-        android:textColor="#000000"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_toEndOf="@+id/setDate1"
+            android:gravity="center"
+            android:text="TIME"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/setDate2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/setDate1" />
+        <Button
+            android:id="@+id/setDate2"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/setDate1"
+            android:background="@drawable/edit_bg2"
+            android:text="提醒时间"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/time2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/setDate1"
-        android:text="TIME2"
-        android:textColor="#000000"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/time2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/setDate1"
+            android:layout_toEndOf="@+id/setDate1"
+            android:background="@drawable/edit_bg"
+            android:gravity="center"
+            android:text="TIME2"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inputlayout4"
+        android:layout_width="394dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/inputlayout3"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_bg">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_bg"
+            android:padding="10dp"
+            android:gravity="top"
+            android:hint="备注"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inputlayout5"
+        android:layout_width="394dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/inputlayout4"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_bg"></RelativeLayout>
 
     <Button
         android:id="@+id/add_data"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/setDate2"
-        android:background="@mipmap/ic_launcher" />
+        android:layout_height="50dp"
+        android:layout_below="@+id/inputlayout5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_bg2"
+        android:text="添加" />
 </RelativeLayout>

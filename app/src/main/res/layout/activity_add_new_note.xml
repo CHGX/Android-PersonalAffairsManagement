@@ -112,9 +112,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/edit_bg"
-            android:padding="10dp"
             android:gravity="top"
             android:hint="备注"
+            android:padding="10dp"
             android:textColorHint="#000000"
             android:textSize="18sp" />
     </RelativeLayout>
@@ -126,7 +126,23 @@
         android:layout_below="@+id/inputlayout4"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/edit_bg"></RelativeLayout>
+        android:background="@drawable/edit_bg">
+
+        <Button
+            android:id="@+id/ImageButton"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="12.5dp"
+            android:background="@drawable/edit_bg2"
+            android:text="拍照" />
+
+        <ImageView
+            android:id="@+id/ImageButtonView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/add_data"

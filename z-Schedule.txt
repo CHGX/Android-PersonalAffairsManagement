@@ -23,7 +23,7 @@ day5 7.14
 牙疼  挂机
 
 day6 7.15
-优化
+layout优化
 QQ第三方接入 
 https://blog.csdn.net/qq1271396448/article/details/79258461
 
@@ -31,7 +31,9 @@ day7 7.16
 挂机
 
 day8 7.17
-不想写
+心态小崩 不想写
 
 day9 7.18
-优化
+layout优化
+拍照存储 https://blog.csdn.net/u010356768/article/details/70808162
+RecyclerView点击事件

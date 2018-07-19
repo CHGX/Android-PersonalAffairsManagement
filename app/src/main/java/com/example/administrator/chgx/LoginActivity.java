@@ -22,7 +22,7 @@ import org.json.JSONObject;
 public class LoginActivity extends AppCompatActivity {
 
 
-    private Button login, logout;
+    private Button login, logout,mainlogin;
     private Tencent mTencent;
     private static final String APPID = "1106969101";
     private QQLoginListener mListener;
@@ -37,6 +37,15 @@ public class LoginActivity extends AppCompatActivity {
         Fresco.initialize(this);
         setContentView(R.layout.activity_login);
         initView();
+        mainlogin = (Button) findViewById(R.id.main_login);
+        mainlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+                LoginActivity.this.startActivity(mainIntent);
+                LoginActivity.this.finish();
+            }
+        });
     }
     private void initView() {
         figure = (SimpleDraweeView) findViewById(R.id.iv_figure);

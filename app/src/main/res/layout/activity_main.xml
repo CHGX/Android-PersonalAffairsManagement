@@ -56,18 +56,12 @@
                         android:background="@mipmap/search4" />
                 </RelativeLayout>
             </LinearLayout>
-            <TextView
-                android:id="@+id/position_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@id/inputlayout"
-                android:text="text1"/>
 
             <android.support.v4.widget.SwipeRefreshLayout
                 android:id="@+id/swipe_refresh"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/position_text_view">
+                android:layout_below="@+id/inputlayout">
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycer_view"
@@ -104,6 +98,11 @@
                 android:orientation="vertical">
                 <include layout="@layout/title"></include>
                 <include layout="@layout/now"></include>
+                <TextView
+                    android:id="@+id/position_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="text1"/>
             </LinearLayout>
         </ScrollView>
     </FrameLayout>

@@ -27,6 +27,7 @@ import android.widget.Toast;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,7 +92,15 @@ public class MainActivity extends AppCompatActivity {
 
     //baidu 定位
     private void requestLocation() {
+        initLocation();
         mLocationClient.start();
+    }
+
+    private void initLocation() {
+        LocationClientOption option = new LocationClientOption();
+        option.setScanSpan(10000);
+        option.setIsNeedAddress(true);
+        mLocationClient.setLocOption(option);
     }
 
     @Override
@@ -122,8 +131,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceiveLocation(BDLocation location) {
             StringBuilder currentPosition = new StringBuilder();
-            currentPosition.append("纬度：").append(location.getLatitude()).append(" ");
-            currentPosition.append("经线：").append(location.getLongitude()).append(" ");
+            currentPosition.append("纬度:").append(location.getLatitude()).append("\n");
+            currentPosition.append("经线:").append(location.getLongitude()).append("\n");
+            currentPosition.append("国家:").append(location.getCountry()).append("\n");
+            currentPosition.append("省:").append(location.getProvince()).append("\n");
+            currentPosition.append("市:").append(location.getCity()).append("\n");
+            currentPosition.append("区:").append(location.getDistrict()).append("\n");
+            currentPosition.append("街道:").append(location.getStreet()).append("\n");
             currentPosition.append("定位方式：");
             if (location.getLocType() == BDLocation.TypeGpsLocation) {
                 currentPosition.append("GPS");
@@ -134,6 +148,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mLocationClient.stop();
+    }
 
     //menu item
     public boolean onCreateOptionsMenu(Menu menu) {

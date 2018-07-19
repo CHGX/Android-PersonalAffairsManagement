@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="?attr/colorPrimary"
+    android:background="@mipmap/headerbak2"
     android:padding="10dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -10,14 +10,13 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_centerInParent="true"
-        android:src="@mipmap/mon1"></de.hdodenhof.circleimageview.CircleImageView>
+        android:src="@mipmap/headerbak"></de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
-        android:id="@+id/mail"
+        android:id="@+id/positionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="tonygreendev@gmail.com"
         android:textColor="#000000"
         android:textSize="14sp" />
 
@@ -25,7 +24,7 @@
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mail"
+        android:layout_above="@+id/positionText"
         android:text="Tony Green"
         android:textColor="#000000"
         android:textSize="14sp" />
